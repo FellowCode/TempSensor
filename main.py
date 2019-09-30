@@ -124,7 +124,7 @@ class TempSensorApp:
         self.temp_labels[22].place(relx=.34, rely=.37)
         self.temp_labels[23].place(relx=.25, rely=.19)
         self.temp_labels[24].place(relx=.25, rely=.33)
-        self.temp_vars[25].set('Корыто: 0.0')
+        self.temp_vars[25].set('Отсек: 0.0')
         self.temp_labels[25].place(relx=.95, rely=.15, anchor=E)
 
 
