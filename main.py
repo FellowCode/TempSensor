@@ -6,6 +6,8 @@ from PIL import Image, ImageTk
 
 from ser import SerialRead
 
+from temp_address import temp_address
+
 user32 = windll.user32
 user32.SetProcessDPIAware()
 
@@ -135,7 +137,11 @@ class TempSensorApp:
         self.bg_image.image = img
 
     def on_get_data(self, s):
-        pass
+        values = s.split(';')
+        address = values[1].split(':')[1]
+        index = temp_address.get(address)
+        temp = values[2].split(':')[1]
+        self.temp_vars[index].set(temp)
 
     def connect(self):
         self.com_num = int(self.com_text.get())
