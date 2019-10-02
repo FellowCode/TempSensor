@@ -137,11 +137,13 @@ class TempSensorApp:
         self.bg_image.image = img
 
     def on_get_data(self, s):
-        values = s.split(';')
-        address = values[1].split(':')[1]
-        index = temp_address.get(address)
-        temp = values[2].split(':')[1]
-        self.temp_vars[index].set(temp)
+        if 'TempC' in s:
+            print(s)
+            values = s.split(';')
+            address = values[1].split(':')[1]
+            index = temp_address.get(address)
+            temp = values[2].split(':')[1]
+            self.temp_vars[index].set(temp)
 
     def connect(self):
         self.com_num = int(self.com_text.get())
