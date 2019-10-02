@@ -100,7 +100,7 @@ class TempSensorApp:
         self.temp_vars = [StringVar() for i in range(self.TEMP_COUNT)]
         for var in self.temp_vars:
             var.set('0.0')
-        self.temp_labels = [Label(textvariable=var, bg='#727272', font=("Arial", 14)) for var in self.temp_vars]
+        self.temp_labels = [Label(textvariable=var, bg='#548DFF', font=("Arial", 14)) for var in self.temp_vars]
         self.temp_labels[0].place(relx=.08, rely=.37)
         self.temp_labels[1].place(relx=.08, rely=.5)
         self.temp_labels[2].place(relx=.21, rely=.43)
@@ -117,8 +117,8 @@ class TempSensorApp:
         self.temp_labels[13].place(relx=.87, rely=.81)
         self.temp_labels[14].place(relx=.925, rely=.58)
         self.temp_labels[15].place(relx=.925, rely=.73)
-        self.temp_labels[16].place(relx=.88, rely=.50)
-        self.temp_labels[17].place(relx=.83, rely=.38)
+        self.temp_labels[16].place(relx=.91, rely=.28)
+        self.temp_labels[17].place(relx=.91, rely=.39)
         self.temp_labels[18].place(relx=.74, rely=.52)
         self.temp_labels[19].place(relx=.56, rely=.43)
         self.temp_labels[20].place(relx=.42, rely=.37)
