@@ -5,7 +5,7 @@
  
 // сигнальный провод датчика
 #define ONE_WIRE_BUS 11
-#define ONE_WIRE2_BUS 10
+#define ONE_WIRE2_BUS 12
  
 // создаём объект для работы с библиотекой OneWire
 OneWire oneWire(ONE_WIRE_BUS);
@@ -32,7 +32,8 @@ void printAddress(DeviceAddress address){
  
 void setup(){
   // инициализируем работу Serial-порта
-  Serial.begin(9600);
+  Serial.begin(115200);
+  Serial.println("start");
   pinMode(9, OUTPUT);
   digitalWrite(9, HIGH);
   // ожидаем открытия Serial-порта
